@@ -56,8 +56,14 @@ img {
   border-radius:10px;
 }
 
-/* Button */
+/* LINKS (clean fix - important) */
 a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Buttons inside cards */
+.card a, .navbar a {
   display:inline-block;
   margin-top:10px;
   background:gold;
@@ -66,7 +72,7 @@ a {
   border-radius:5px;
 }
 
-/* Floating WhatsApp */
+/* WhatsApp floating button */
 .float {
   position:fixed;
   bottom:20px;
@@ -74,6 +80,21 @@ a {
   background:#25D366;
   padding:15px;
   border-radius:50%;
+  color:white;
+  font-size:18px;
+}
+
+/* Complaint Form Button special highlight */
+.card a[href*="forms.gle"] {
+  background: #ffcc00;
+  color: black;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card a[href*="forms.gle"]:hover {
+  background: gold;
+  transform: scale(1.05);
 }
 
 /* Footer */
