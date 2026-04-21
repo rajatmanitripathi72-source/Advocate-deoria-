@@ -3,6 +3,20 @@ body {
   font-family:Poppins;
   background:#0d0d0d;
   color:white;
+
+  /* 🔥 page load animation */
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Navbar */
@@ -23,6 +37,7 @@ body {
   color:white;
   margin-left:15px;
   text-decoration:none;
+  transition: 0.3s ease;
 }
 
 /* Hero */
@@ -44,6 +59,15 @@ body {
   padding:20px;
   background:#1a1a1a;
   border-radius:10px;
+
+  /* smooth hover */
+  transition: 0.3s ease;
+}
+
+/* 👆 card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
 .card h2 {
@@ -56,13 +80,13 @@ img {
   border-radius:10px;
 }
 
-/* LINKS (clean fix - important) */
+/* LINKS RESET */
 a {
   text-decoration: none;
   color: white;
 }
 
-/* Buttons inside cards */
+/* Buttons inside cards + navbar */
 .card a, .navbar a {
   display:inline-block;
   margin-top:10px;
@@ -70,6 +94,18 @@ a {
   color:black;
   padding:8px 15px;
   border-radius:5px;
+  transition: 0.2s ease;
+}
+
+/* 👆 click effect */
+.card a:active, .navbar a:active {
+  transform: scale(0.92);
+}
+
+/* 👆 hover effect */
+.card a:hover, .navbar a:hover {
+  box-shadow: 0 0 12px gold;
+  transform: translateY(-2px);
 }
 
 /* WhatsApp floating button */
@@ -82,6 +118,18 @@ a {
   border-radius:50%;
   color:white;
   font-size:18px;
+
+  transition: 0.3s ease;
+}
+
+/* WhatsApp hover + click */
+.float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #25D366;
+}
+
+.float:active {
+  transform: scale(0.9);
 }
 
 /* Complaint Form Button special highlight */
@@ -89,12 +137,12 @@ a {
   background: #ffcc00;
   color: black;
   font-weight: 600;
-  transition: 0.3s;
 }
 
 .card a[href*="forms.gle"]:hover {
   background: gold;
   transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
 }
 
 /* Footer */
@@ -102,4 +150,4 @@ footer {
   text-align:center;
   padding:10px;
   background:#000;
-}
+                            }
